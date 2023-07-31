@@ -1,36 +1,21 @@
 public class task_b {
     public static void main(String[] args) {
         
-        final String COLOR_RED = "\u001B[31m";
-        final String COLOR_BLUE = "\u001B[34m";
-        final String COLOR_YELLOW = "\u001B[33m";
-        final String BOLD = "\u001B[1m";
-        final String RESET = "\u001B[0m";
-
-
-        String col1 = "%s|%s%-17s%s|%s";
-        String col2 = "%-5s|\n";
-        
-        String line1col1 = "%s|%s%s%s%-17s%s%s|";
-        String line1col2 = "%s%s%-5s%s|%s\n";
-
-        String line2col2 = "%s%5s%s|%s\n";
-
-        
-        String line = "%s%s%s \n";
-        String name1 = "Alice";
-        String name2 = "Bob";
         int age1 = 24;
-        int age2 = 30;
+        String name1 = "Alice";
 
-        System.out.printf(line, COLOR_YELLOW, "+-----------------+-----+", RESET);
-        System.out.printf(line1col1, COLOR_YELLOW,RESET, BOLD,COLOR_BLUE, "NAME", COLOR_YELLOW, RESET);
-        System.out.printf(line1col2, BOLD,COLOR_BLUE, "AGE", COLOR_YELLOW,RESET);
-        System.out.printf(line, COLOR_YELLOW, "+-----------------+-----+", RESET);
-        System.out.printf(col1, COLOR_YELLOW, RESET, name1, COLOR_YELLOW, RESET);
-        System.out.printf(line2col2, COLOR_RED, age1, COLOR_YELLOW, RESET );
-        System.out.printf(col1, COLOR_YELLOW, RESET, name2, COLOR_YELLOW, RESET);
-        System.out.printf(line2col2, COLOR_RED, age2, COLOR_YELLOW, RESET );
-        System.out.printf(line, COLOR_YELLOW, "+-----------------+-----+", RESET);
+        int age2 = 30;
+        String name2 = "Bob";
+
+        final String TITLE = "\033[1;34m";
+        final String COLOR = "\033[35m";
+        final String RESET = "\033[0m";
+
+        System.out.println("\n+-----------------+-----+");
+        System.out.printf("|%1$sNAME%2$-17s| %1$5sAGE%2$s |",TITLE , RESET); 
+        System.out.println("\n+-----------------+-----+");
+        System.out.printf("|%-17s|  %3$s%d%4$s |\n" ,name1, age1, COLOR, RESET);
+        System.out.printf("|%-17s|  %3$s%d%4$s |\n" ,name2, age2, COLOR, RESET);
+        System.out.println("+-----------------+-----+");
     }
 }
