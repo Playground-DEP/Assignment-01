@@ -15,6 +15,6 @@ public class Demo4 {
         final String COLOR6 = "\u001B[37m" ;
         final String RESET = "\u001B[0m" ;
 
-        System.out.printf("%s%d%13$s/%s%d%13$s/%s%d%13$s %s%d%13$s:%s%d%13$s:%s%d%13$s", COLOR1, month, COLOR2, day, COLOR3, year, COLOR4, hour, COLOR5, minute, COLOR6, second, RESET);
+        System.out.printf("%s%d%13$s/%s%d%13$s/%s%d%13$s %s%d%13$s:%s%d%13$s:%s%d", COLOR1, month, COLOR2, day, COLOR3, year, COLOR4, hour, COLOR5, minute, COLOR6, second, RESET);
     }
 }
